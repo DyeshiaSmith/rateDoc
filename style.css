@@ -1,3 +1,26 @@
+/* #jumbotron {
+  background: url(https://images.unsplash.com/photo-1528334713982-2d1fe11a157a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80) center center no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+}
+
+#jumbotron > h2 {
+  color: pink;
+  text-align: center;
+}
+
+#jumbotron > a {
+  text-decoration: none;
+  background-color: white;
+  font-size: 1.5em;
+  padding: 1.5rem;
+  border-radius: 10px;
+} */
+
 body {
   /* font-family: 'Actor', sans-serif; */
   background: tan;

@@ -1,18 +1,19 @@
-import axios from "axios";
 import Navigo from "navigo";
 import { capitalize } from "lodash";
-import { Header, Nav, Main, Footer } from "./components";
 import * as state from "./store";
-
-//the toggle menu
-document.querySelector(".fa-bars").addEventListener("click", () => {
-  document.querySelector("nav > ul").classList.toggle("hidden--mobile");
-});
+import { Header, Nav, Main, Footer } from "./components";
+import axios from "axios";
+import "./env";
 
 function render(st = state.Home) {
-  document.getElementById("#root").innerHTML = `  ${Header(st)}  ${Nav(
-    st.Links
-  )}  ${Main(st)}  ${Footer()} router.updatePageLinks(); `;
+  document.querySelector("#root").innerHTML = `
+  ${Header(st)}
+  ${Nav(state.Links)}
+  ${Main(st)}
+  ${Footer()}
+`;
+  router.updatePageLinks();
+  addNavEventListeners();
 }
 
 render(state.Home);
@@ -26,3 +27,12 @@ router.on({
     render(state[page]);
   }
 });
+
+function addNavEventListeners() {
+  // add menu toggle to bars icon in nav bar
+  document
+    .querySelector(".fa-bars")
+    .addEventListener("click", () =>
+      document.querySelector("nav > ul").classList.toggle("hidden--mobile")
+    );
+}
