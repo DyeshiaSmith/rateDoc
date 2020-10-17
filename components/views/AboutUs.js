@@ -1,6 +1,7 @@
-export default st => `
+export default () => `
 <section id="about">
 <h2>Rate a Doc</h2>
+<h3>About Us</h3>
   <p>Rate A Doc was created for clients who need to ....</p>
   <p>Quisque at hendrerit libero, eget interdum lectus. Etiam facilisis leo nulla, sit amet imperdiet nunc molestie vel. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur consectetur felis a purus volutpat, sed finibus magna iaculis. Pellentesque tristique tristique turpis nec vehicula. Maecenas varius quis tellus id mollis. Vivamus ut ultrices ligula</p>
 
