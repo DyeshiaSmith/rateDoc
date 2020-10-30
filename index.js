@@ -35,3 +35,8 @@ function addNavEventListeners() {
       document.querySelector("nav > ul").classList.toggle("hidden--mobile")
     );
 }
+
+//add button toggle to cards
+document.querySelector(".card-btn").addEventListener("click", () => {
+  document.querySelector(".container").classList.toggle("change");
+});
