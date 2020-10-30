@@ -1,9 +1,11 @@
-import { Header, Nav, Main, Footer } from "./components";
-import * as state from "./store";
 import Navigo from "navigo";
 import { capitalize } from "lodash";
-import axios from "axios";
+import * as state from "./store";
+import { Header, Nav, Main, Footer } from "./components";
+// import axios from "axios";
 import "./env";
+
+const router = new Navigo(window.location.origin);
 
 function render(st = state.Home) {
   document.querySelector("#root").innerHTML = `
@@ -18,15 +20,12 @@ function render(st = state.Home) {
 
 render(state.Home);
 
-const router = new Navigo(window.location.origin);
-
-router.on({
-  "/": () => render(state.Home),
-  ":page": params => {
-    let page = capitalize(params.page);
-    render(state[page]);
-  }
-});
+router
+  .on({
+    "/": () => render(state.Home),
+    ":page": params => render(state[capitalize(params.page)])
+  })
+  .resolve();
 
 function addNavEventListeners() {
   // add menu toggle to bars icon in nav bar
