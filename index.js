@@ -7,6 +7,13 @@ import "./env";
 
 const router = new Navigo(window.location.origin);
 
+router
+  .on({
+    "/": () => render(state.Home),
+    ":page": params => render(state[capitalize(params.page)])
+  })
+  .resolve();
+
 function render(st = state.Home) {
   document.querySelector("#root").innerHTML = `
   ${Header(st)}
@@ -15,17 +22,15 @@ function render(st = state.Home) {
   ${Footer()}
 `;
   router.updatePageLinks();
+
+  // if (!state.login.signedIn) {
+  //   render(state.Login);
+  //   router.navigate("/Home");
+  // }
   addNavEventListeners();
 }
 
-render(state.Home);
-
-router
-  .on({
-    "/": () => render(state.Home),
-    ":page": params => render(state[capitalize(params.page)])
-  })
-  .resolve();
+// render(state.Home);
 
 function addNavEventListeners() {
   // add menu toggle to bars icon in nav bar

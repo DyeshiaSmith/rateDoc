@@ -1,5 +1,6 @@
 export default [
-  { title: "Home", text: "Rate A Doc" },
-  { title: "Login", text: "Login" },
-  { title: "About", text: "About Us" }
+  { title: "Home", text: "Rate a Doc" },
+  { title: "About", text: "About Us" },
+  { title: "Review", text: "Review A Doc" },
+  { title: "Login", text: "Login" }
 ];
