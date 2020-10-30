@@ -8,10 +8,6 @@
   height: 60vh;
 }
 
-#jumbotron > h2 {
-  color: pink;
-  text-align: center;
-}
 
 #jumbotron > a {
   text-decoration: none;
@@ -20,6 +16,35 @@
   padding: 1.5rem;
   border-radius: 10px;
 } */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 40rem;
+  background-color: white;
+}
+
+.card-bio {
+  background-color: lawngreen;
+  padding: 3rem 3rem 8rem 3rem;
+  display: flex;
+  border-radius: 0.5rem 0.5rem 0 0;
+}
 
 body {
   /* font-family: 'Actor', sans-serif; */
@@ -62,3 +87,4 @@ section > p {
   display: flex;
   justify-content: center;
 }
+
