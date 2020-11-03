@@ -1,4 +1,5 @@
 export default {
   header: "My Login",
-  page: "Login"
+  page: "Login",
+  signedIn: false
 };
