@@ -1,4 +1,4 @@
 export default {
-  header: "Rate",
+  header: "Home",
   page: "Home"
 };

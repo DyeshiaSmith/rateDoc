@@ -13,8 +13,5 @@ export default links => `
   <label for="site-search">Search the site:</label>
 <input type="search" id="site-search" name="q">
 <button>Search</button>
-
-</nav>`;
-
-// <li><a href="login.html">Login</a></li>
-// <li><a href="rateADoc.html">Rate A Doc</a></li>
+</nav>
+`;

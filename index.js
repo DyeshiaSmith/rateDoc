@@ -1,8 +1,8 @@
+import { Header, Nav, Main, Footer } from "./components";
+import * as state from "./store";
 import Navigo from "navigo";
 import { capitalize } from "lodash";
-import * as state from "./store";
-import { Header, Nav, Main, Footer } from "./components";
-// import axios from "axios";
+import axios from "axios";
 import "./env";
 
 const router = new Navigo(window.location.origin);
@@ -30,7 +30,7 @@ function render(st = state.Home) {
   addNavEventListeners();
 }
 
-// render(state.Home);
+render(state.Home);
 
 function addNavEventListeners() {
   // add menu toggle to bars icon in nav bar
@@ -70,7 +70,7 @@ const ratingControl = document.getElementById("rating-control");
 let doctor;
 
 //doc select change
-doctorSelect.addEventListener("change", e => {
+doctorSelect.addEventListener("click", e => {
   doctor = e.target.value;
   // Enable rating control
   ratingControl.disabled = false;
