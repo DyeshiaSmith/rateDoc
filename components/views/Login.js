@@ -3,9 +3,9 @@ export default () => `
   <div class="login-page">
   <div class="form">
   <form class="register-form">
-  <input type="text" placeholder="username"/>
-  <input type="text" placeholder="password"/>
-  <input type="text" placeholder="email"/>
+  <input type="text" placeholder="Username"/>
+  <input type="text" placeholder="Password"/>
+  <input type="text" placeholder="email@example.com"/>
   <button>Create</button>
   <p class="message">Already a User? <a href="#">Login</a>
   </p>
