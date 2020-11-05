@@ -1,24 +1,45 @@
-/* #jumbotron {
-  background: url(https://images.unsplash.com/photo-1528334713982-2d1fe11a157a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80) center center no-repeat;
-  background-size: cover;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 60vh;
-}
-
-
-#jumbotron > a {
-  text-decoration: none;
-  background-color: white;
-  font-size: 1.5em;
-  padding: 1.5rem;
-  border-radius: 10px;
-} */
-* {
+body {
   margin: 0;
   padding: 0;
+  background: url(https://unsplash.com/photos/7Z03R1wOdmI) center center no-repeat;
+}
+
+header {
+  background: olive;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  background: whitesmoke;
+}
+
+nav > i {
+  padding: 1rem;
+  font-size: 1.5em;
+}
+
+nav > ul {
+  display: flex;
+  align-items: center;
+  padding: 0 0;
+}
+
+nav > ul > li {
+  display: flex;
+  justify-content: space-between;
+  text-decoration: dashed;
+  padding: 8px 8px;
+  font-size: 1.2em;
+}
+
+.section > p {
+  background: orange;
+  display: flex;
+  justify-content: center;
 }
 
 html {
@@ -28,7 +49,6 @@ html {
 .container {
   width: 100%;
   height: 100vh;
-  background-color: mediumblue;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -84,7 +104,6 @@ html {
   right: 10rem;
   width: 20rem;
   height: 6rem;
-  background-color: blue;
   color: pink;
   border-radius: 5rem;
   border: none;
@@ -158,6 +177,12 @@ html {
   transition: all 0.5s;
 }
 
+.contact-details h4 {
+  font-size: 1.6rem;
+  letter-spacing: 0.1rem;
+  margin-bottom: 0.5rem;
+}
+
 .change .card-contact h4 {
   transform: scale(1);
 }
@@ -182,59 +207,13 @@ html {
   margin-right: 2rem;
 }
 
-.contact-details h4 {
-  font-size: 1.6rem;
-  letter-spacing: 0.1rem;
-  margin-bottom: 0.5rem;
-}
-
 .contact-details p {
   font-size: 1.4rem;
   color: gray;
   letter-spacing: 0.1rem;
 }
 
-body {
-  /* font-family: 'Actor', sans-serif; */
-  background: tan;
-}
 
-header {
-  background: olive;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-nav {
-  display: flex;
-  align-items: center;
-}
-
-nav > i {
-  padding: 1rem;
-  font-size: 1.5em;
-}
-
-nav > ul {
-  display: flex;
-  align-items: center;
-  padding: 0 0;
-}
-
-nav > ul > li {
-  display: flex;
-  justify-content: space-between;
-  text-decoration: dashed;
-  padding: 8px 8px;
-  font-size: 1.2em;
-}
-
-section > p {
-  background: orange;
-  display: flex;
-  justify-content: center;
-}
 
 .login-page {
   width: 360px;
@@ -274,7 +253,8 @@ section > p {
   cursor: pointer;
 }
 
-.form button:hover, .form button:active {
+.form button:hover,
+.form button:active {
   background: #43A047;
 }
 
