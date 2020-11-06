@@ -6,15 +6,18 @@
 }
 
 body {
-  background-image: url(https://images.unsplash.com/photo-1590452522687-e32391adaeb2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1250&q=90);
-  height: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
+  margin: 0 auto;
+  background-image: url(https://images.unsplash.com/photo-1590452522687-e32391adaeb2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1550&q=90);
+  backdrop-filter: blur(2px);
   background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
 }
 
 nav {
   background-color: var(--color-primary);
+  opacity: 0.6;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -121,7 +124,7 @@ html {
   box-shadow: 0 0.3rem 0.8rem rgba(0, 0, 0, 0.3);
   outline: none;
   cursor: pointer;
-  transition: all .5s;
+  transition: all 0.5s;
 }
 
 .change .card-btn {
@@ -221,8 +224,6 @@ html {
   letter-spacing: 0.1rem;
 }
 
-
-
 .login-page {
   width: 360px;
   padding: 10% 0 0;
@@ -240,7 +241,7 @@ html {
 }
 
 .form input {
-  outline: 1;
+  outline: 1px;
   background: #F8E4DD;
   width: 100%;
   border: 0;
@@ -297,7 +298,7 @@ html {
 
 .stars-outer::before {
   content: "\f005 \f005 \f005 \f005 \f005";
-  font-family: 'Font Awesome 5 free';
+  font-family: "Font-Awesome 5 free";
   font-weight: 900;
   color:#ccc;
 }
@@ -310,5 +311,6 @@ html {
 }
 
 footer {
-  background-color: var(--color-primary)
+  background-color: var(--color-primary);
+  opacity: 0.6;
 }
