@@ -27,24 +27,59 @@ function render(st = state.Home) {
   //   render(state.Login);
   //   router.navigate("/Home");
   // }
-  addNavEventListeners();
+
+  addNavEventListeners(st);
 }
 
 render(state.Home);
 
-function addNavEventListeners() {
+function addNavEventListeners(state = {}) {
+  // TODO: any js code for specific page (submit btn) goes inside if conditional fot that pg.
+  console.log("state", state);
+  // Run getRatings when DOM loads
+  // document.addEventListener("DOMContentLoaded", getRatings);
+
+  let doctor;
   // add menu toggle to bars icon in nav bar
   document
     .querySelector(".fa-bars")
     .addEventListener("click", () =>
       document.querySelector("nav > ul").classList.toggle("hidden--mobile")
     );
-}
+  if (state.page === "Home") {
+    //add button toggle to cards
+    document.querySelector(".card-btn").addEventListener("click", () => {
+      document.querySelector(".container").classList.toggle("change");
+    });
+  }
 
-//add button toggle to cards
-document.querySelector(".card-btn").addEventListener("click", () => {
-  document.querySelector(".container").classList.toggle("change");
-});
+  if (state.page === "Reviewdoc") {
+    const doctorSelect = document.getElementById("doctor-select");
+    const ratingControl = document.getElementById("rating-control");
+    //doc select change
+    doctorSelect.addEventListener("click", e => {
+      doctor = e.target.value;
+      // Enable rating control
+      ratingControl.disabled = false;
+      ratingControl.value = ratings[doctor];
+    });
+    // Rating control change eventlistner.
+    ratingControl.addEventListener("blur", e => {
+      const rating = e.target.value;
+
+      // Make sure 5 or under
+      if (rating > 5) {
+        alert("Please rate 1 to 5");
+        return;
+      }
+
+      // Change rating
+      ratings[doctor] = rating;
+
+      getRatings();
+    });
+  }
+}
 
 // Leave reviews
 const ratings = {
@@ -59,39 +94,6 @@ const ratings = {
 
 // Total Stars
 const starsTotal = 5;
-
-// Run getRatings when DOM loads
-document.addEventListener("DOMContentLoaded", getRatings);
-
-// Form=mss
-const doctorSelect = document.getElementById("doctor-select");
-const ratingControl = document.getElementById("rating-control");
-
-let doctor;
-
-//doc select change
-doctorSelect.addEventListener("click", e => {
-  doctor = e.target.value;
-  // Enable rating control
-  ratingControl.disabled = false;
-  ratingControl.value = ratings[doctor];
-});
-
-// Rating control change eventlistner.
-ratingControl.addEventListener("blur", e => {
-  const rating = e.target.value;
-
-  // Make sure 5 or under
-  if (rating > 5) {
-    alert("Please rate 1 to 5");
-    return;
-  }
-
-  // Change rating
-  ratings[doctor] = rating;
-
-  getRatings();
-});
 
 // Get ratings
 function getRatings() {

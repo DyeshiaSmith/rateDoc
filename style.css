@@ -19,7 +19,6 @@ nav {
   background-color: var(--color-primary);
   opacity: 0.6;
   display: flex;
-  justify-content: space-between;
   align-items: center;
 }
 
@@ -37,14 +36,21 @@ nav > ul {
 nav > ul > li {
   display: flex;
   justify-content: space-between;
-  text-decoration: dashed;
   padding: 8px 8px;
-  font-size: 1.2em;
+}
+
+nav input button {
+  font-size: 2em;
 }
 
 .logo {
   width: 5%;
   height: 5%;
+}
+
+p {
+  font-size: 15px;
+  border-bottom: 1px solid;
 }
 
 .section > p {
@@ -70,7 +76,7 @@ html {
 }
 
 .card-bio {
-  background-color: mediumslateblue;
+  background-color: var(--accent-color);
   padding: 3rem 3rem 8rem 3rem;
   display: flex;
   border-radius: 0.5rem 0.5rem 0 0;
@@ -93,7 +99,7 @@ html {
 
 .person-info {
   width: 60%;
-  color: powderblue;
+  color: var(--secondary-color);
   text-shadow: 0 0.1rem 0.2rem rgba(0, 0, 0, 0.3);
 }
 
@@ -115,7 +121,7 @@ html {
   right: 10rem;
   width: 20rem;
   height: 6rem;
-  color: pink;
+  color: var(--tertiary-color);
   border-radius: 5rem;
   border: none;
   font-family: sans-serif;
@@ -165,7 +171,7 @@ html {
 }
 
 .card-contact {
-  background-color: orangered;
+  background-color: var(--secondary-color);
   color: white;
   padding: 1.5rem 2rem;
   border-radius: 0 0 0.5rem 0.5rem;
@@ -274,7 +280,7 @@ html {
 }
 
 .form .message a {
-  color: #4ACF50;
+  color: var(--accent-color);
   text-decoration: none;
 }
 
@@ -313,4 +319,8 @@ html {
 footer {
   background-color: var(--color-primary);
   opacity: 0.6;
+  display: flex;
+  margin-left: 3px;
+  font-size: 10px;
 }
+

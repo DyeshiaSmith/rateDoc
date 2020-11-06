@@ -4,7 +4,7 @@ export default () => `
   <div class="form">
   <form class="register-form">
   <input type="text" placeholder="Username"/>
-  <input type="text" placeholder="Password"/>
+  <input type="password" placeholder="Password"/>
   <input type="text" placeholder="email@example.com"/>
   <button>Create</button>
   <p class="message">Already a User? <a href="#">Login</a>
@@ -12,8 +12,8 @@ export default () => `
   </form>
 
   <form class="login-form">
-  <input type="text" placeholder="username"/>
-  <input type="password" placeholder="password"/>
+  <input type="text" placeholder="Username"/>
+  <input type="password" placeholder="Password"/>
   <button>Login</button>
   <p class="message">Not Registered? <a href="#">Register</a></p>
   </form>
