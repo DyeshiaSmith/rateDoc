@@ -1,20 +1,23 @@
-body {
-  margin: 0;
-  padding: 0;
-  background: url(https://github.com/DyeshiaSmith/rateDoc/blob/master/pictures/aloe%20plant.jpeg) center center no-repeat;
+:root {
+  --color-primary: #D5CABD;
+  --secondary-color: #F8E4DD;
+  --tertiary-color: #D5BBBA;
+  --accent-color: #4E8397;
 }
 
-header {
-  background: olive;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+body {
+  background-image: url(https://images.unsplash.com/photo-1590452522687-e32391adaeb2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1250&q=90);
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 nav {
+  background-color: var(--color-primary);
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  background: whitesmoke;
 }
 
 nav > i {
@@ -34,6 +37,11 @@ nav > ul > li {
   text-decoration: dashed;
   padding: 8px 8px;
   font-size: 1.2em;
+}
+
+.logo {
+  width: 5%;
+  height: 5%;
 }
 
 .section > p {
@@ -224,7 +232,7 @@ html {
 .form {
   position: relative;
   z-index: 1;
-  background: rgba(7, 40, 195, 0.8);
+  background: var(--tertiary-color);
   max-width: 360px;
   margin: 0 auto 100px;
   padding: 45px;
@@ -233,7 +241,7 @@ html {
 
 .form input {
   outline: 1;
-  background: pink;
+  background: #F8E4DD;
   width: 100%;
   border: 0;
   margin: 0 0 15px;
@@ -245,7 +253,7 @@ html {
 .form button {
   text-transform: uppercase;
   outline: 0;
-  background: teal;
+  background: var(--accent-color);
   width: 100%;
   border: 0;
   padding: 15px;
@@ -299,4 +307,8 @@ html {
   font-family: 'Font Awesome 5 free';
   font-weight: 900;
   color:#f8ce0b;
+}
+
+footer {
+  background-color: var(--color-primary)
 }
