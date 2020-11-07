@@ -97,6 +97,10 @@ export default () => `
         </tr>
       </tbody>
     </table>
+    <div>
+<textarea class="textarea" rows="4" cols="50">
+</textarea>
+</div>
   </div>
 </div>
 `;
