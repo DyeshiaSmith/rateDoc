@@ -32,6 +32,8 @@
     "lodash": "^4.17.20",
     "lodash-id": "^0.14.0",
     "lowdb": "^1.0.0",
+    "mongodb": "^3.6.3",
+    "mongoose": "^5.10.13",
     "morgan": "^1.10.0",
     "navigo": "^7.1.2",
     "parcel-bundler": "^1.12.4",
