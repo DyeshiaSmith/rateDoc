@@ -23,11 +23,6 @@ function render(st = state.Home) {
 `;
   router.updatePageLinks();
 
-  // if (!state.login.signedIn) {
-  //   render(state.Login);
-  //   router.navigate("/Home");
-  // }
-
   addNavEventListeners(st);
 }
 
