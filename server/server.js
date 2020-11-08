@@ -1,10 +1,8 @@
+require("dotenv").config();
 const express = require("express");
 const mongoose = require("mongoose");
 mongoose
-  .connect(
-    "mongodb+srv://dyesDB:Monet0612!@cluster0.nqvol.mongodb.net/rateADoc?authSource=admin&replicaSet=atlas-2f38wx-shard-0&readPreference=primary&appname=MongoDB%20Compass&ssl=true",
-    { useUnifiedTopology: true }
-  )
+  .connect(process.env.DATABASE_URL, { useUnifiedTopology: true })
   .then(client => {
     console.log("Connected to Database");
   })
@@ -21,5 +19,10 @@ db.once("open", () => (db_status = "Successfully opened connection!"));
 app.get("/", (req, res) => {
   res.send(db_status);
 });
+
+app.use(express.json());
+
+const doctorsRouter = require("./routes/doctors");
+app.use("/doctors", doctorsRouter);
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
