@@ -1,4 +1,4 @@
-require("dotenv").config();
+// require("dotenv").config();
 const cors = require("cors");
 const express = require("express");
 const bodyParser = require("body-parser");
@@ -13,7 +13,7 @@ let db;
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
 
 const con = MongoClient.connect(
-  `mongodb+srv://dyesDB:<password>@cluster0.nqvol.mongodb.net/rateADoc?retryWrites=true&w=majority`,
+  `mongodb+srv://dyesDB:Monet0612!@cluster0.nqvol.mongodb.net/rateADoc?retryWrites=true&w=majority`,
   (err, database) => {
     if (err) return console.log(err);
     db = database.db("rateADoc");

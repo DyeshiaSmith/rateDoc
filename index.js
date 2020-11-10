@@ -24,10 +24,50 @@ function render(st = state.Home) {
 `;
   router.updatePageLinks();
 
+  getData(st);
   addNavEventListeners(st);
 }
 
 render(state.Home);
+
+let docList = {};
+
+function getData(state = {}) {
+  if (state.page === "Home" || state.page === "Reviewdoc") {
+    axios
+      .get("http://localhost:3000/rateADoc")
+      .then(response => {
+        docList = response.data.dates;
+        const containerElement = document.getElementById("container");
+        docList.forEach(doc => {
+          const card = document.createElement("div");
+          card.innerHTML = `<div class="card">
+            <div class="card-bio">
+              <div class="img-wrapper">
+                <img src="https://images.unsplash.com/photo-1527203561188-dae1bc1a417f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=958&q=80"
+                alt="Person" />
+              </div>
+              <div class="person-info">
+                <h3 class="doc-name">${doc.Name}</h3>
+                <p class="doc-type">${doc.Speciality}</p>
+              </div>
+              <button class="card-btn">
+                    <span class="card-btn-contact">Review!</span>
+                    <i class="fas fa-angle-up"></i>
+                  </button>
+            </div>
+            <div class="card-contact">
+              <h4>See Reviews</h4>
+            </div>
+          </div>`;
+          containerElement.appendChild(card);
+        });
+      })
+      .catch(err => {
+        console.log(err);
+      });
+  }
+}
 
 function addNavEventListeners(state = {}) {
   // TODO: any js code for specific page (submit btn) goes inside if conditional fot that pg.
@@ -110,8 +150,3 @@ function getRatings() {
       ratings[rating];
   }
 }
-
-axios
-  .get(`http://localhost:3000/rateADoc`)
-  .then(response => console.log(response.data))
-  .catch(err => console.log(err));
