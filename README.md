@@ -1,22 +1,17 @@
-# Capstone
-## RateMyDoc
-### Diagram:
+# RateADoc
 
-## TODO:
-// add in elevator pitch
-
-## About:
-Ive created a web application for people who would like to conduct research on
-doctors before they go. Once a user logs into their profile They will be able to
-search for doctors, view the doctors name and location. Users can view ratings in
-the categories of timeliness, environment, caring, and would they recommend. Users
-will be able to leave a detailed review about their experience
-This type of resource is vital at a time like this...
-
-## API: https://developer.betterdoctor.com/
+## About
+I’m extremely interested in Women’s Health, that encouraged me to create a web
+application that allows everyone to give their physicians a performance rating. Users
+will be able to rate their doctors in 7 different areas, while also leaving a detailed
+review. This will allow other users of the site to be able to look up reviews on other
+physicians, and have a better foundation of knowledge as they meet and work with them.
 
 
+## Prerequisites
 
+## Contact
+If you want to contact me you can reach me at dyeshiamonet@gmail.com
 
 
 RE:
