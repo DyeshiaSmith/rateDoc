@@ -4,6 +4,7 @@ import Navigo from "navigo";
 import { capitalize } from "lodash";
 import axios from "axios";
 import "./env";
+import "cors";
 
 const router = new Navigo(window.location.origin);
 
@@ -109,3 +110,8 @@ function getRatings() {
       ratings[rating];
   }
 }
+
+axios
+  .get(`http://localhost:3000/rateADoc`)
+  .then(response => console.log(response.data))
+  .catch(err => console.log(err));
