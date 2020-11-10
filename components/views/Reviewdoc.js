@@ -12,11 +12,10 @@ export default () => `
     <option value="environment">Environment</option>
     <option value="timeliness">Timeliness</option>
     </select>
-    </div>
-  <div class="form-group">
     <input type="number" id="rating-control"
     class="form-control" step="0.1" max="5" placeholder="Rate 1 - 5"
   </div>
+
     <table class="table table-striped">
       <thead>
       <tr>
@@ -25,7 +24,7 @@ export default () => `
       </tr>
       </thead>
       <tbody>
-        <tr class="overall">
+        <tr class="tr">
           <td>Overall</td>
           <td>
           <div class="stars-outer">
@@ -35,7 +34,7 @@ export default () => `
             <span class="number-rating"></span>
           </td>
         </tr>
-        <tr class="care">
+        <tr class="tr2">
           <td>Caring</td>
           <td>
           <div class="stars-outer">
@@ -45,7 +44,7 @@ export default () => `
             <span class="number-rating"></span>
           </td>
         </tr>
-        <tr class="patience">
+        <tr class="tr">
           <td>Patience</td>
           <td>
           <div class="stars-outer">
@@ -55,7 +54,7 @@ export default () => `
             <span class="number-rating"></span>
           </td>
         </tr>
-        <tr class="listening">
+        <tr>
           <td>Willingness to Listen</td>
           <td>
           <div class="stars-outer">
@@ -65,7 +64,7 @@ export default () => `
             <span class="number-rating"></span>
           </td>
         </tr>
-        <tr class="knowledge">
+        <tr class="tr">
           <td>Knowledge of Treatment</td>
           <td>
           <div class="stars-outer">
@@ -75,7 +74,7 @@ export default () => `
             <span class="number-rating"></span>
           </td>
         </tr>
-        <tr class="environment">
+        <tr>
           <td>Environment</td>
           <td>
           <div class="stars-outer">
@@ -85,7 +84,7 @@ export default () => `
             <span class="number-rating"></span>
           </td>
         </tr>
-        <tr class="timeliness">
+        <tr class="tr">
           <td>Timeliness</td>
           <td>
           <div class="stars-outer">
