@@ -30,7 +30,7 @@ app.use(express.json());
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
 
 const con = MongoClient.connect(
-  "mongodb+srv://dyesDB:Monet0612!!@cluster0.nqvol.mongodb.net/rateADoc?authSource=admin&replicaSet=atlas-2f38wx-shard-0&readPreference=primary&appname=MongoDB%20Compass&ssl=true",
+  (process.env.DATABASE_URL, { useUnifiedTopology: true }),
   (err, database) => {
     if (err) return console.log(err);
     db = database.db("rateADoc");
