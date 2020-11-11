@@ -10,7 +10,7 @@ export default links => `
         )
         .join("")}
       </ul>
-  <label for="site-search">Search the site:</label>
+  <label for="site-search">Search:</label>
 <input type="search" id="site-search" name="q">
 <button>Search</button>
 </nav>

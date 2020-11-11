@@ -96,10 +96,13 @@ export default () => `
         </tr>
       </tbody>
     </table>
+    <input type="text" placeholder="Doctors Name">
+    <input type="text" placeholder="Doctors Speciality">
     <div>
-<textarea class="textarea" rows="4" cols="50">
+<textarea class="textarea" placeholder="Leave Review" rows="9" cols="60">
 </textarea>
 </div>
+<input type="submit" value="Submit">
   </div>
 </div>
 `;
