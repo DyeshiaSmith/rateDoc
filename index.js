@@ -117,6 +117,14 @@ function addNavEventListeners(state = {}) {
   }
 }
 
+//submit fxn to make api call and add doctor data
+//to get data back..add template literals inside of api axios call to populate cards....
+// function addEventListener() {
+//   document
+//     .getElementById("submit")
+//     .addNavEventListeners("click", () => getData());
+// }
+
 // Leave reviews
 const ratings = {
   overall: 4.7,

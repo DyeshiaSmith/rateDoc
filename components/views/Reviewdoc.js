@@ -102,7 +102,7 @@ export default () => `
 <textarea class="textarea" placeholder="Leave Review" rows="9" cols="60">
 </textarea>
 </div>
-<input type="submit" value="Submit">
+<input class="animate__animated" id="Submit" type="submit" value="Submit">
   </div>
 </div>
 `;
